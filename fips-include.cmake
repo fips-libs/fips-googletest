@@ -21,6 +21,7 @@ macro(gtest_begin name)
     endif()
 
     set(FipsAddFilesEnabled 1)
+    set(CurTargetName ${name})
     fips_reset(${CurTargetName}Test)
     if (FIPS_OSX)
         set(CurAppType "windowed")
