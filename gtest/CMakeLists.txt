@@ -35,4 +35,5 @@ elseif(FIPS_MSVC)
     if (NOT TB_ENABLE_RTTI)
         string(REPLACE "/GR" "" CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS}) # -fno-rtti
     endif()
+    set_target_properties(googletest PROPERTIES COMPILE_FLAGS "/wd4530 /wd4577 /WX-")
 endif()
